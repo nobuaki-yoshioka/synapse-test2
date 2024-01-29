@@ -1,0 +1,17 @@
+{
+	"name": "SQLPoolFullAccessPermission",
+	"properties": {
+		"content": {
+			"query": "CREATE LOGIN [test@lsmoonlight331gmail.onmicrosoft.com] FROM EXTERNAL PROVIDER;\n\nALTER ROLE db_owner ADD member [test@lsmoonlight331gmail.onmicrosoft.com]; \n\nALTER SERVER ROLE sysadmin ADD MEMBER [test@lsmoonlight331gmail.onmicrosoft.com];\n",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "master",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}

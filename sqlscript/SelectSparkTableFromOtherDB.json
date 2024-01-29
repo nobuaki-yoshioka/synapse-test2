@@ -1,0 +1,17 @@
+{
+	"name": "SelectSparkTableFromOtherDB",
+	"properties": {
+		"content": {
+			"query": "select * from sparktest.dbo.sparkexternalparquet;",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "master",
+				"poolName": "Built-in"
+			},
+			"resultLimit": -1
+		},
+		"type": "SqlQuery"
+	}
+}

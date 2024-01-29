@@ -1,0 +1,17 @@
+{
+	"name": "SelectSparkManagedTable",
+	"properties": {
+		"content": {
+			"query": "SELECT\n   *\nFROM SparkManagedParquet\nWHERE year = '2019'",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "sparktest",
+				"poolName": "Built-in"
+			},
+			"resultLimit": -1
+		},
+		"type": "SqlQuery"
+	}
+}

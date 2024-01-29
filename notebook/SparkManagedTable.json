@@ -1,0 +1,762 @@
+{
+	"name": "SparkManagedTable",
+	"properties": {
+		"nbformat": 4,
+		"nbformat_minor": 2,
+		"bigDataPool": {
+			"referenceName": "testsparkpool",
+			"type": "BigDataPoolReference"
+		},
+		"sessionProperties": {
+			"driverMemory": "28g",
+			"driverCores": 4,
+			"executorMemory": "28g",
+			"executorCores": 4,
+			"numExecutors": 2,
+			"runAsWorkspaceSystemIdentity": false,
+			"conf": {
+				"spark.dynamicAllocation.enabled": "false",
+				"spark.dynamicAllocation.minExecutors": "2",
+				"spark.dynamicAllocation.maxExecutors": "2",
+				"spark.autotune.trackingId": "2a41d71e-4852-4747-b402-23b4f38c0456"
+			}
+		},
+		"metadata": {
+			"saveOutput": true,
+			"synapse_widget": {
+				"version": "0.1",
+				"state": {
+					"243e13a1-9a31-4a12-857d-a96acbbb7ca1": {
+						"type": "Synapse.DataFrame",
+						"sync_state": {
+							"table": {
+								"rows": [
+									{
+										"0": "SO49171",
+										"1": "1",
+										"2": "2021-01-01",
+										"3": "Mariah Foster",
+										"4": "mariah21@adventure-works.com",
+										"5": "Road-250 Black, 48",
+										"6": "1",
+										"7": "2181.5625",
+										"8": "174.525"
+									},
+									{
+										"0": "SO49172",
+										"1": "1",
+										"2": "2021-01-01",
+										"3": "Brian Howard",
+										"4": "brian23@adventure-works.com",
+										"5": "Road-250 Red, 44",
+										"6": "1",
+										"7": "2443.35",
+										"8": "195.468"
+									},
+									{
+										"0": "SO49173",
+										"1": "1",
+										"2": "2021-01-01",
+										"3": "Linda Alvarez",
+										"4": "linda19@adventure-works.com",
+										"5": "Mountain-200 Silver, 38",
+										"6": "1",
+										"7": "2071.4196",
+										"8": "165.7136"
+									},
+									{
+										"0": "SO49174",
+										"1": "1",
+										"2": "2021-01-01",
+										"3": "Gina Hernandez",
+										"4": "gina4@adventure-works.com",
+										"5": "Mountain-200 Silver, 42",
+										"6": "1",
+										"7": "2071.4196",
+										"8": "165.7136"
+									},
+									{
+										"0": "SO49178",
+										"1": "1",
+										"2": "2021-01-01",
+										"3": "Beth Ruiz",
+										"4": "beth4@adventure-works.com",
+										"5": "Road-550-W Yellow, 44",
+										"6": "1",
+										"7": "1000.4375",
+										"8": "80.035"
+									},
+									{
+										"0": "SO49179",
+										"1": "1",
+										"2": "2021-01-01",
+										"3": "Evan Ward",
+										"4": "evan13@adventure-works.com",
+										"5": "Road-550-W Yellow, 38",
+										"6": "1",
+										"7": "1000.4375",
+										"8": "80.035"
+									},
+									{
+										"0": "SO49175",
+										"1": "1",
+										"2": "2021-01-01",
+										"3": "Margaret Guo",
+										"4": "margaret24@adventure-works.com",
+										"5": "Road-250 Red, 52",
+										"6": "1",
+										"7": "2443.35",
+										"8": "195.468"
+									},
+									{
+										"0": "SO49180",
+										"1": "1",
+										"2": "2021-01-01",
+										"3": "Mitchell Yuan",
+										"4": "mitchell6@adventure-works.com",
+										"5": "Road-650 Black, 58",
+										"6": "1",
+										"7": "782.99",
+										"8": "62.6392"
+									},
+									{
+										"0": "SO49176",
+										"1": "1",
+										"2": "2021-01-01",
+										"3": "Shawn Sharma",
+										"4": "shawn11@adventure-works.com",
+										"5": "Mountain-200 Silver, 46",
+										"6": "1",
+										"7": "2071.4196",
+										"8": "165.7136"
+									},
+									{
+										"0": "SO49177",
+										"1": "1",
+										"2": "2021-01-01",
+										"3": "Barbara Chande",
+										"4": "barbara44@adventure-works.com",
+										"5": "Mountain-200 Silver, 42",
+										"6": "1",
+										"7": "2071.4196",
+										"8": "165.7136"
+									}
+								],
+								"schema": [
+									{
+										"key": "0",
+										"name": "SalesOrderNumber",
+										"type": "string"
+									},
+									{
+										"key": "1",
+										"name": "SalesOrderLineNumber",
+										"type": "int"
+									},
+									{
+										"key": "2",
+										"name": "OrderDate",
+										"type": "date"
+									},
+									{
+										"key": "3",
+										"name": "CustomerName",
+										"type": "string"
+									},
+									{
+										"key": "4",
+										"name": "EmailAddress",
+										"type": "string"
+									},
+									{
+										"key": "5",
+										"name": "Item",
+										"type": "string"
+									},
+									{
+										"key": "6",
+										"name": "Quantity",
+										"type": "int"
+									},
+									{
+										"key": "7",
+										"name": "UnitPrice",
+										"type": "double"
+									},
+									{
+										"key": "8",
+										"name": "TaxAmount",
+										"type": "double"
+									}
+								],
+								"truncated": false
+							},
+							"isSummary": false,
+							"language": "scala"
+						},
+						"persist_state": {
+							"view": {
+								"type": "details",
+								"chartOptions": {
+									"chartType": "bar",
+									"aggregationType": "sum",
+									"categoryFieldKeys": [
+										"0"
+									],
+									"seriesFieldKeys": [
+										"1"
+									],
+									"isStacked": false
+								}
+							}
+						}
+					},
+					"e840223a-2c23-4dc9-97ad-8368d238d79b": {
+						"type": "Synapse.DataFrame",
+						"sync_state": {
+							"table": {
+								"rows": [
+									{
+										"0": "SalesOrderNumber",
+										"1": "string"
+									},
+									{
+										"0": "SalesOrderLineNumber",
+										"1": "int"
+									},
+									{
+										"0": "OrderDate",
+										"1": "date"
+									},
+									{
+										"0": "CustomerName",
+										"1": "string"
+									},
+									{
+										"0": "EmailAddress",
+										"1": "string"
+									},
+									{
+										"0": "Item",
+										"1": "string"
+									},
+									{
+										"0": "Quantity",
+										"1": "int"
+									},
+									{
+										"0": "UnitPrice",
+										"1": "decimal(10,0)"
+									},
+									{
+										"0": "TaxAmount",
+										"1": "decimal(10,0)"
+									},
+									{
+										"0": "Year",
+										"1": "int"
+									}
+								],
+								"schema": [
+									{
+										"key": "0",
+										"name": "_1",
+										"type": "string"
+									},
+									{
+										"key": "1",
+										"name": "_2",
+										"type": "string"
+									}
+								],
+								"truncated": false
+							},
+							"isSummary": false,
+							"language": "scala"
+						},
+						"persist_state": {
+							"view": {
+								"type": "details",
+								"chartOptions": {
+									"chartType": "bar",
+									"aggregationType": "count",
+									"categoryFieldKeys": [
+										"0"
+									],
+									"seriesFieldKeys": [
+										"0"
+									],
+									"isStacked": false
+								}
+							}
+						}
+					},
+					"dc772e9b-a1aa-4e95-b973-ad894f2fb58a": {
+						"type": "Synapse.DataFrame",
+						"sync_state": {
+							"table": {
+								"rows": [
+									{
+										"0": "SO49171",
+										"1": "1",
+										"2": "2021-01-01",
+										"3": "Mariah Foster",
+										"4": "mariah21@adventure-works.com",
+										"5": "Road-250 Black, 48",
+										"6": "1",
+										"7": "2181.5625",
+										"8": "174.525",
+										"9": "2021"
+									},
+									{
+										"0": "SO49172",
+										"1": "1",
+										"2": "2021-01-01",
+										"3": "Brian Howard",
+										"4": "brian23@adventure-works.com",
+										"5": "Road-250 Red, 44",
+										"6": "1",
+										"7": "2443.35",
+										"8": "195.468",
+										"9": "2021"
+									},
+									{
+										"0": "SO49173",
+										"1": "1",
+										"2": "2021-01-01",
+										"3": "Linda Alvarez",
+										"4": "linda19@adventure-works.com",
+										"5": "Mountain-200 Silver, 38",
+										"6": "1",
+										"7": "2071.4196",
+										"8": "165.7136",
+										"9": "2021"
+									},
+									{
+										"0": "SO49174",
+										"1": "1",
+										"2": "2021-01-01",
+										"3": "Gina Hernandez",
+										"4": "gina4@adventure-works.com",
+										"5": "Mountain-200 Silver, 42",
+										"6": "1",
+										"7": "2071.4196",
+										"8": "165.7136",
+										"9": "2021"
+									},
+									{
+										"0": "SO49178",
+										"1": "1",
+										"2": "2021-01-01",
+										"3": "Beth Ruiz",
+										"4": "beth4@adventure-works.com",
+										"5": "Road-550-W Yellow, 44",
+										"6": "1",
+										"7": "1000.4375",
+										"8": "80.035",
+										"9": "2021"
+									},
+									{
+										"0": "SO49179",
+										"1": "1",
+										"2": "2021-01-01",
+										"3": "Evan Ward",
+										"4": "evan13@adventure-works.com",
+										"5": "Road-550-W Yellow, 38",
+										"6": "1",
+										"7": "1000.4375",
+										"8": "80.035",
+										"9": "2021"
+									},
+									{
+										"0": "SO49175",
+										"1": "1",
+										"2": "2021-01-01",
+										"3": "Margaret Guo",
+										"4": "margaret24@adventure-works.com",
+										"5": "Road-250 Red, 52",
+										"6": "1",
+										"7": "2443.35",
+										"8": "195.468",
+										"9": "2021"
+									},
+									{
+										"0": "SO49180",
+										"1": "1",
+										"2": "2021-01-01",
+										"3": "Mitchell Yuan",
+										"4": "mitchell6@adventure-works.com",
+										"5": "Road-650 Black, 58",
+										"6": "1",
+										"7": "782.99",
+										"8": "62.6392",
+										"9": "2021"
+									},
+									{
+										"0": "SO49176",
+										"1": "1",
+										"2": "2021-01-01",
+										"3": "Shawn Sharma",
+										"4": "shawn11@adventure-works.com",
+										"5": "Mountain-200 Silver, 46",
+										"6": "1",
+										"7": "2071.4196",
+										"8": "165.7136",
+										"9": "2021"
+									},
+									{
+										"0": "SO49177",
+										"1": "1",
+										"2": "2021-01-01",
+										"3": "Barbara Chande",
+										"4": "barbara44@adventure-works.com",
+										"5": "Mountain-200 Silver, 42",
+										"6": "1",
+										"7": "2071.4196",
+										"8": "165.7136",
+										"9": "2021"
+									}
+								],
+								"schema": [
+									{
+										"key": "0",
+										"name": "SalesOrderNumber",
+										"type": "string"
+									},
+									{
+										"key": "1",
+										"name": "SalesOrderLineNumber",
+										"type": "int"
+									},
+									{
+										"key": "2",
+										"name": "OrderDate",
+										"type": "date"
+									},
+									{
+										"key": "3",
+										"name": "CustomerName",
+										"type": "string"
+									},
+									{
+										"key": "4",
+										"name": "EmailAddress",
+										"type": "string"
+									},
+									{
+										"key": "5",
+										"name": "Item",
+										"type": "string"
+									},
+									{
+										"key": "6",
+										"name": "Quantity",
+										"type": "int"
+									},
+									{
+										"key": "7",
+										"name": "UnitPrice",
+										"type": "double"
+									},
+									{
+										"key": "8",
+										"name": "TaxAmount",
+										"type": "double"
+									},
+									{
+										"key": "9",
+										"name": "Year",
+										"type": "int"
+									}
+								],
+								"truncated": false
+							},
+							"isSummary": false,
+							"language": "scala"
+						},
+						"persist_state": {
+							"view": {
+								"type": "details",
+								"chartOptions": {
+									"chartType": "bar",
+									"aggregationType": "sum",
+									"categoryFieldKeys": [
+										"0"
+									],
+									"seriesFieldKeys": [
+										"1"
+									],
+									"isStacked": false
+								}
+							}
+						}
+					}
+				}
+			},
+			"enableDebugMode": false,
+			"kernelspec": {
+				"name": "synapse_pyspark",
+				"display_name": "Synapse PySpark"
+			},
+			"language_info": {
+				"name": "python"
+			},
+			"a365ComputeOptions": {
+				"id": "/subscriptions/40307b59-1312-43fe-b24e-fc978580ea84/resourceGroups/dp500-kef5ic4/providers/Microsoft.Synapse/workspaces/synapsekef5ic4/bigDataPools/testsparkpool",
+				"name": "testsparkpool",
+				"type": "Spark",
+				"endpoint": "https://synapsekef5ic4.dev.azuresynapse.net/livyApi/versions/2019-11-01-preview/sparkPools/testsparkpool",
+				"auth": {
+					"type": "AAD",
+					"authResource": "https://dev.azuresynapse.net",
+					"authHeader": null
+				},
+				"sparkVersion": "3.3",
+				"nodeCount": 3,
+				"cores": 4,
+				"memory": 28,
+				"extraHeader": null
+			},
+			"sessionKeepAliveTimeout": 30
+		},
+		"cells": [
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					},
+					"microsoft": {
+						"language": "sparksql"
+					},
+					"collapsed": false
+				},
+				"source": [
+					"%%sql\r\n",
+					"\r\n",
+					"CREATE DATABASE sparktest;"
+				],
+				"execution_count": 31
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"microsoft": {
+						"language": "python"
+					},
+					"collapsed": false
+				},
+				"source": [
+					"%%pyspark\r\n",
+					"\r\n",
+					"from pyspark.sql.types import *\r\n",
+					"\r\n",
+					"schema = StructType([\r\n",
+					"    StructField(\"SalesOrderNumber\", StringType(), False),\r\n",
+					"    StructField(\"SalesOrderLineNumber\", IntegerType(), False),\r\n",
+					"    StructField(\"OrderDate\", DateType(), False),\r\n",
+					"    StructField(\"CustomerName\", StringType(), False),\r\n",
+					"    StructField(\"EmailAddress\", StringType(), False),\r\n",
+					"    StructField(\"Item\", StringType(), False),\r\n",
+					"    StructField(\"Quantity\", IntegerType(), False),\r\n",
+					"    StructField(\"UnitPrice\", DoubleType(), False),\r\n",
+					"    StructField(\"TaxAmount\", DoubleType(), False)\r\n",
+					"])\r\n",
+					"\r\n",
+					"df = spark.read \\\r\n",
+					"          .format(\"csv\") \\\r\n",
+					"          .load('abfss://files@datalakekef5ic4.dfs.core.windows.net/sales/csv', schema=schema)\r\n",
+					"\r\n",
+					"display(df.limit(10))"
+				],
+				"execution_count": 13
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					},
+					"microsoft": {
+						"language": "sparksql"
+					},
+					"collapsed": false
+				},
+				"source": [
+					"%%sql\r\n",
+					"\r\n",
+					"DROP TABLE IF EXISTS sparktest.SparkManagedParquet;\r\n",
+					"\r\n",
+					"CREATE TABLE sparktest.SparkManagedParquet (\r\n",
+					"         SalesOrderNumber       STRING,\r\n",
+					"         SalesOrderLineNumber   INT,\r\n",
+					"         OrderDate              DATE,\r\n",
+					"         CustomerName           STRING,\r\n",
+					"         EmailAddress           STRING,\r\n",
+					"         Item                   STRING,\r\n",
+					"         Quantity               INT,\r\n",
+					"         UnitPrice              DOUBLE,\r\n",
+					"         TaxAmount              DOUBLE\r\n",
+					")\r\n",
+					"USING Parquet\r\n",
+					"PARTITIONED BY (Year INT)\r\n",
+					";"
+				],
+				"execution_count": 32
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					},
+					"microsoft": {
+						"language": "sparksql"
+					},
+					"collapsed": false
+				},
+				"source": [
+					"%%sql\r\n",
+					"\r\n",
+					"USE sparktest;\r\n",
+					"SHOW TABLES;"
+				],
+				"execution_count": 33
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					},
+					"microsoft": {
+						"language": "python"
+					},
+					"collapsed": false
+				},
+				"source": [
+					"%%pyspark\r\n",
+					"\r\n",
+					"from pyspark.sql.functions import year, col\r\n",
+					"\r\n",
+					"dated_df = df.withColumn(\"Year\", year(col(\"OrderDate\")))\r\n",
+					"\r\n",
+					"display(dated_df.limit(10))"
+				],
+				"execution_count": 20
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					},
+					"microsoft": {
+						"language": "python"
+					},
+					"collapsed": false
+				},
+				"source": [
+					"%%pyspark\r\n",
+					"\r\n",
+					"display(dated_df.dtypes)"
+				],
+				"execution_count": 15
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					},
+					"microsoft": {
+						"language": "python"
+					}
+				},
+				"source": [
+					"%%pyspark\r\n",
+					"\r\n",
+					"dated_df.write.mode(\"overwrite\").insertInto(\"sparktest.SparkManagedParquet\", overwrite=True);"
+				],
+				"execution_count": 34
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					},
+					"microsoft": {
+						"language": "sparksql"
+					},
+					"collapsed": false
+				},
+				"source": [
+					"%%sql\r\n",
+					"\r\n",
+					"SELECT * FROM sparktest.SparkManagedParquet;"
+				],
+				"execution_count": 35
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					""
+				]
+			}
+		]
+	}
+}

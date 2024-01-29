@@ -1,0 +1,17 @@
+{
+	"name": "SelectDataLakeStoragePartition",
+	"properties": {
+		"content": {
+			"query": "SELECT\n   *\nFROM dbo.DataLakeStorageParquetView\nWHERE year = '2019'",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "Sales",
+				"poolName": "Built-in"
+			},
+			"resultLimit": -1
+		},
+		"type": "SqlQuery"
+	}
+}

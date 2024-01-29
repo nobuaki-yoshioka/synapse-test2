@@ -1,0 +1,17 @@
+{
+	"name": "CreateViewDataLakeStorageParquet",
+	"properties": {
+		"content": {
+			"query": "CREATE VIEW DataLakeStorageParquetView AS\nSELECT\n  *,\n  nyc.filepath(1) AS [year]\nFROM\n  OPENROWSET(\n    BULK 'https://datalakekef5ic4.dfs.core.windows.net/files/sales/parquet/year=*/*.parquet',\n    FORMAT='PARQUET'\n  ) AS nyc",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "Sales",
+				"poolName": "Built-in"
+			},
+			"resultLimit": -1
+		},
+		"type": "SqlQuery"
+	}
+}

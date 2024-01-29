@@ -1,0 +1,17 @@
+{
+	"name": "SelectBlobPartition",
+	"properties": {
+		"content": {
+			"query": "SELECT\n   *\nFROM dbo.BlobParquetView\nWHERE year = '2019';\n\n",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "Sales",
+				"poolName": "Built-in"
+			},
+			"resultLimit": -1
+		},
+		"type": "SqlQuery"
+	}
+}

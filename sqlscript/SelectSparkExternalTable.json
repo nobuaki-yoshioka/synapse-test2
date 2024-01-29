@@ -1,0 +1,17 @@
+{
+	"name": "SelectSparkExternalTable",
+	"properties": {
+		"content": {
+			"query": "SELECT\n   *\nFROM SparkExternalParquet\nWHERE year = '2019';\n",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "sparktest",
+				"poolName": "Built-in"
+			},
+			"resultLimit": -1
+		},
+		"type": "SqlQuery"
+	}
+}

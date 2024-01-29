@@ -1,0 +1,17 @@
+{
+	"name": "CreateSalesDB",
+	"properties": {
+		"content": {
+			"query": " CREATE DATABASE Sales\n   COLLATE Latin1_General_100_BIN2_UTF8;\n GO;\n\n Use Sales;\n GO;\n\n CREATE EXTERNAL DATA SOURCE sales_data WITH (\n     LOCATION = 'https://datalakekef5ic4.dfs.core.windows.net/files/sales/'\n );\n GO;",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "Sales",
+				"poolName": "Built-in"
+			},
+			"resultLimit": -1
+		},
+		"type": "SqlQuery"
+	}
+}
