@@ -2,7 +2,7 @@
 	"name": "SQL script 1",
 	"properties": {
 		"content": {
-			"query": "ALTER ROLE db_owner DROP MEMBER test;\nDROP USER test;\n\nCREATE LOGIN test WITH PASSWORD = 'Bonny@487';\n\nCREATE USER test FROM LOGIN test;\n\nALTER ROLE db_owner ADD MEMBER test;\n",
+			"query": "/* この方法はストレージの権限が付与できないのでNG */\nALTER ROLE db_owner DROP MEMBER test;\nDROP USER test;\n\nCREATE LOGIN test WITH PASSWORD = 'Bonny@487';\n\nCREATE USER test FROM LOGIN test;\n\nALTER ROLE db_owner ADD MEMBER test;\n",
 			"metadata": {
 				"language": "sql"
 			},
