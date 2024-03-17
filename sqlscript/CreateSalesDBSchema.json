@@ -1,0 +1,17 @@
+{
+	"name": "CreateSalesDBSchema",
+	"properties": {
+		"content": {
+			"query": "CREATE SCHEMA [dwh];\nGO\n\nCREATE SCHEMA [ds];\nGO\n\nSELECT * FROM sys.schemas ORDER BY name;\n",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "Sales",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
