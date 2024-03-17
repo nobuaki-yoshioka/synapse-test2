@@ -1,5 +1,5 @@
 {
-	"name": "SQL script 1",
+	"name": "SAS",
 	"properties": {
 		"content": {
 			"query": "ALTER ROLE db_owner DROP MEMBER test;\nDROP USER test;\n\nCREATE LOGIN test WITH PASSWORD = 'Bonny@487';\n\nCREATE USER test FROM LOGIN test;\n\nALTER ROLE db_owner ADD MEMBER test;\n\n\n/* SASの権限を割り当て */\nCREATE CREDENTIAL [https://cs11003200266ef4121.blob.core.windows.net/test]\n WITH IDENTITY = 'SHARED ACCESS SIGNATURE', SECRET = '?sv=2022-11-02&ss=b&srt=sco&sp=rwdlacitfx&se=2025-12-31T13:50:45Z&st=2024-02-02T05:50:45Z&spr=https&sig=l7qkE8jfF4vpeFF2G0AoxEJTL7Oczm%2BiyehJwjcwKGc%3D';\n\n/* masterデータベースで実行  */\nGRANT REFERENCES ON CREDENTIAL::[https://cs11003200266ef4121.blob.core.windows.net/test] TO test;\n\n",
