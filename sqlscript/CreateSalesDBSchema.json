@@ -2,7 +2,7 @@
 	"name": "CreateSalesDBSchema",
 	"properties": {
 		"content": {
-			"query": "CREATE SCHEMA [dwh];\nGO\n\nCREATE SCHEMA [ds];\nGO\n\nSELECT * FROM sys.schemas ORDER BY name;\n",
+			"query": "USE Sales;\n\nCREATE SCHEMA [dwh];\nGO\n\nCREATE SCHEMA [ds];\nGO\n\n-- スキーマ一覧\nSELECT * FROM sys.schemas ORDER BY name;\nGO\n\n-- 全ビュー取得\nSELECT * FROM sys.sql_modules;\n\n-- DSスキーマにビューを作成\nCREATE VIEW [ds].[BlobParquetView_ds] AS\nSELECT\n  *,\n  nyc.filepath(1) AS [year]\nFROM\n  OPENROWSET(\n    BULK 'https://cs11003200266ef4121.blob.core.windows.net/test/sales/parquet/year=*/*.parquet',\n    FORMAT='PARQUET'\n  ) AS nyc\n\n-- DWHスキーマにビューを作成\nCREATE VIEW [dwh].[BlobParquetView_dwh] AS\nSELECT\n  *,\n  nyc.filepath(1) AS [year]\nFROM\n  OPENROWSET(\n    BULK 'https://cs11003200266ef4121.blob.core.windows.net/test/sales/parquet/year=*/*.parquet',\n    FORMAT='PARQUET'\n  ) AS nyc\n",
 			"metadata": {
 				"language": "sql"
 			},
