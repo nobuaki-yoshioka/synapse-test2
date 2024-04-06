@@ -5,7 +5,16 @@
 			{
 				"name": "Azure Function1",
 				"type": "AzureFunctionActivity",
-				"dependsOn": [],
+				"state": "Inactive",
+				"onInactiveMarkAs": "Succeeded",
+				"dependsOn": [
+					{
+						"activity": "GetDateTime",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"policy": {
 					"timeout": "0.12:00:00",
 					"retry": 0,
@@ -17,12 +26,34 @@
 				"typeProperties": {
 					"method": "POST",
 					"body": {
+						"value": "@variables('datetime')",
+						"type": "Expression"
+					}
+				}
+			},
+			{
+				"name": "GetDateTime",
+				"type": "SetVariable",
+				"dependsOn": [],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "datetime",
+					"value": {
 						"value": "@formatDateTime(\n   convertTimeZone(utcnow(), 'UTC', 'Tokyo Standard Time'), 'yyyyMMdd HH'\n)",
 						"type": "Expression"
 					}
 				}
 			}
 		],
+		"variables": {
+			"datetime": {
+				"type": "String"
+			}
+		},
 		"annotations": []
 	}
 }
