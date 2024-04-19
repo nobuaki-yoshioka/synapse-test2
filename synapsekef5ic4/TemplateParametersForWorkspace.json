@@ -1,0 +1,18 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"workspaceName": {
+			"value": "synapsekef5ic4"
+		},
+		"AzureBlobStorage_connectionString": {
+			"value": ""
+		},
+		"synapsekef5ic4-WorkspaceDefaultSqlServer_connectionString": {
+			"value": "Integrated Security=False;Encrypt=True;Connection Timeout=30;Data Source=tcp:synapsekef5ic4.sql.azuresynapse.net,1433;Initial Catalog=@{linkedService().DBName}"
+		},
+		"synapsekef5ic4-WorkspaceDefaultStorage_properties_typeProperties_url": {
+			"value": "https://datalakekef5ic4.dfs.core.windows.net"
+		}
+	}
+}
